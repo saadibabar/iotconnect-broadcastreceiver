@@ -1,0 +1,6 @@
+#!/bin/bash
+for pin in {100..999};do
+	adb shell am broadcast -a MASTER_ON --ei key $pin
+	echo "Trying PIN : $pin"
+	sleep 1
+done
